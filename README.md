@@ -10,6 +10,12 @@ Esse projeto pretende atender as seguintes necessidades:
 
 Vou mostrar como fazer, tudo em Python <3
 
+Materiais utilizados:
+- Rapberry pi 3
+- Camera V2
+- Botão sem retensão, dois pinos, normalmente fechado
+- Fiozinhos / jumpers
+
 <h2>Com a Raspberry desligada:</h2>
 
 <h3>a) Montagem elétrica do botão</h3>
@@ -38,3 +44,28 @@ A câmera deve ser montada conforme a figura acima, a “fita”possui um lado c
 
 <h2>Com a Raspberry ligada:</h2>
 
+<h3>c) Configurando a câmera</h3>
+
+Se for a primeira vez que você acessa a raspberry, digite os seguintes comandos (o $ aparecerá digitado, indica que não está no modo administrador):
+
+<p><b>
+$sudo apt-get update <br>
+$sudo apt-get upgrade
+</b></p>
+
+Essa etapa demora um pouco, pois busca atualizações e pacotes para o sistema operacional e suas aplicações. Depois que finalizar as instalações, digite o comando de configurações: <br>
+
+<p><b>
+$sudo raspi-config
+</b></p>
+
+Agora configuraremos conforme a sequencia de prints: <br>
+<img src="" alt="Console com o comando *rasp-config*" height=80% width=80%><br>
+<img src="" alt="Menu de opções, escolher opção Interfacing Options" height=80% width=80%><br>
+<img src="" alt="Perguntando se quer ativar a camera" height=80% width=80%><br>
+<img src="" alt="Confirmando que a câmera foi ativada com sucesso" height=80% width=80%><br>
+
+Após ativar a câmera você pode testá-la com o comando
+<p><b>
+$sudo raspistill -o image.jpg
+  </b> </p>
