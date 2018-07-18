@@ -7,7 +7,7 @@ from picamera import *
 
 def nomear_foto() :
     data = datetime.datetime.now()                            # Pegando os dados de tempo nesse exato momento.
-    nome = ( 'Bruna' + str(data.year) +                       # Aqui foi feito uma soma de strings, como dia, mes, ano,
+    nome = ( 'Exemplo' + str(data.year) +                     # Aqui foi feito uma soma de strings, como dia, mes, ano,
            str(data.month) + str(data.day) +                  #    hora, minuto, segundo e microsegundos sao numeros, usamos 
            str(data.hour) + str(data.minute) +                #    ~str~ para converter de numero para texto (string).
            str(data.second) + str(data.microsecond) + '.jpg')
