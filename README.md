@@ -69,3 +69,28 @@ Após ativar a câmera você pode testá-la com o comando
 <p><b>
 $sudo raspistill -o image.jpg
   </b> </p>
+
+
+<h3>d) Programa em python para a câmera</h3>
+
+Antes de comecar o codigo, instale a biblioteca picamera da linguagem python
+<p> <b> $sudo apt-get install python-picamera </b> </p>
+Ou
+<p> <b> $pip install picamera </b> </p>
+Baixe o código liga_camera.py que se encontra nesse repositorio
+
+<h3>e) Programa em python para monitorar botão</h3>
+Salve o arquivo monitora_botao.py deste repositorio. Antes de iniciar instale a biblioteca :
+<p> <b> $pip install RPI.GPIO </b> </p>
+
+<h3>f) Rodando um programa em segundo plano</h3>
+Para colocar em segundo plano no linux, editamos o arquivo rc.local por meio do seguinte comando
+<br>
+<img src="" alt="Acessando o arquivo rc.local" width=80% height=80%> <br>
+<img src="" alt="Arquivo aberto" width=80% height=80%> <br>
+<img src="" alt="Acessando o arquivo rc.local" width=80% height=80%> <br>
+Antes de exit 0, insira o comando
+sudo python3 /home/pi/script/monitora_botao.py &
+<img src="" alt="Com o comando escrito" width=80% height=80%> <br>
+Aperte control + X para sair, depois S para salvar, enter para confirmar o nome do arquivo.
+
